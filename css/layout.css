@@ -1,0 +1,240 @@
+:root {
+    --primary-color: #ac6c23;
+    --text-color: #2c2d31;
+    --b-color: #4f4f4f;
+    --w-color: #ffffff;
+    --bg-color: #f2f0ed;
+    --bgg-color: #f2f0ed;
+
+
+    --inner-size: 97rem;
+}
+
+
+body {
+    color: var(--text-color);
+}
+
+body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+.inner {
+    max-width: var(--inner-size);
+
+    margin: 0 auto;
+}
+
+
+@media (max-width:1202px) {
+    .inner {
+        max-width: 1170px;
+        margin: 0 auto;
+
+        /* r */
+        margin: 0 16px;
+    }
+}
+
+.default {
+    padding: 120px 0;
+}
+
+.default .title {
+    max-width: 1410px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.default .title h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.default .title p {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.default.bg {
+    background: var(--bg-color);
+}
+
+
+@media (max-width:1202px) {
+    .default {
+        padding: 80px 0;
+    }
+
+    .default .title {
+        max-width: 1170px;
+        margin: 0 auto;
+        margin-bottom: 32px;
+
+        /* r */
+        margin: 0 16px;
+        margin-bottom: 32px;
+    }
+
+    .default .title h2 {
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .default .title .desc {
+        display: block;
+        margin-top: 16px;
+        line-height: 24px;
+        font-size: 17px;
+        font-weight: 400;
+    }
+}
+
+.btn_default {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 0.8rem 2.4rem;
+
+    color: var(--w-color);
+    border-radius: 8px;
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+}
+
+.btn_default::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 0;
+    background: var(--b-color);
+    transition: 0.4s;
+}
+
+.btn_default:hover::before {
+    top: auto;
+    bottom: 0;
+    height: 100%;
+}
+
+.btn_default::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    z-index: -2;
+    background: var(--primary-color);
+
+}
+
+
+.btn_bubble {
+    position: relative;
+    z-index: 1;
+    margin: 16px;
+    display: inline-block;
+    width: 160px;
+    height: 40px;
+
+    line-height: 40px;
+    border: 2px solid #222;
+    border-radius: 32px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.btn_bubble:hover span {
+    color: #fff;
+}
+
+.btn_bubble::before {
+    content: "";
+    position: absolute;
+    top: 64px;
+    left: 0;
+    z-index: -1;
+
+    width: 60px;
+    height: 120px;
+
+    background: #222;
+    border-radius: 50px 50px 0 0;
+
+    transition: 0.4s;
+
+    transform: scaleX(1.5);
+}
+
+.btn_bubble:hover::before {
+    top: -30px;
+}
+
+.btn_bubble::after {
+    content: "";
+    position: absolute;
+    top: 64px;
+    left: 60px;
+    z-index: -1;
+
+    width: 60px;
+    height: 120px;
+
+    background: #222;
+    border-radius: 50px 50px 0 0;
+    transition: 0.4s 0.1s;
+
+    transform: scaleX(1.5);
+
+}
+
+.btn_bubble:hover::after {
+    top: -30px;
+}
+
+
+.btn_bubble span::before {
+    content: "";
+    position: absolute;
+    top: 64px;
+    left: 120px;
+    z-index: -1;
+
+    width: 60px;
+    height: 120px;
+
+    background: #222;
+    border-radius: 50px 50px 0 0;
+    transition: 0.4s 0.2s;
+
+    transform: scaleX(1.5);
+}
+
+.btn_bubble:hover span::before {
+    top: -30px;
+}
+
+.btn_bubble span::after {
+    content: "";
+    position: absolute;
+    top: 64px;
+    left: 180px;
+    z-index: -1;
+
+    width: 60px;
+    height: 120px;
+
+    background: #222;
+    border-radius: 50px 50px 0 0;
+    transition: 0.4s 0.3s;
+
+    transform: scaleX(1.5);
+}
+
+.btn_bubble:hover span::after {
+    top: -30px;
+}
